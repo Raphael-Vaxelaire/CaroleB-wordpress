@@ -1,9 +1,14 @@
 <?php
-// ceci est la page media
-
 get_header();
-// slt
-the_title();
 ?>
+
+<main>
+    <h1 class="h1"><?php the_title(); ?> </h1>
+
+    <section class="media-wrapper">
+        <?php the_content(); ?>
+    </section>
+</main>
+
 <?php
 get_footer();

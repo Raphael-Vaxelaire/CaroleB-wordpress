@@ -1,8 +1,29 @@
-// =============================================================================
-// Home Page
-// =============================================================================
-
 @use "../abstracts" as *;
 
-.medias {
+.h1 {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+}
+
+.media-wrapper {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	justify-items: center;
+
+	.wp-block-image {
+		img {
+			width: 10rem;
+			filter: grayscale(100%);
+			transition: 0.5s;
+		}
+	}
+	.wp-block-image:hover {
+		img {
+			filter: none;
+			transform: scale(1.1);
+			transition: 0.5s;
+		}
+	}
 }
