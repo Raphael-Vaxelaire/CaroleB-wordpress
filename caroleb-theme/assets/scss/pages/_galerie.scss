@@ -1,0 +1,27 @@
+// =============================================================================
+// Galerie Page
+// =============================================================================
+
+@use "../abstracts" as *;
+
+.galerie-nav {
+	display: flex;
+	justify-content: center;
+	.nav-list {
+		display: flex;
+		list-style: none;
+		.list-individual {
+			margin: 1rem;
+			.list-a {
+				font-size: larger;
+				text-decoration: none;
+				color: #c4c3c3;
+				transition: 0.5s;
+			}
+			.list-a:hover {
+				color: #000000;
+				transition: 0.5s;
+			}
+		}
+	}
+}
