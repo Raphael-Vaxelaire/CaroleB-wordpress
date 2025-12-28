@@ -5,8 +5,8 @@
 @use '../abstracts' as *;
 
 .main-navigation {
+	margin-top: 5%;
 	position: relative;
-
 	.menu-toggle {
 		@include button-reset;
 		display: block;
@@ -54,20 +54,23 @@
 	.primary-menu {
 		display: flex;
 		gap: spacing('md');
+		
 		list-style: none;
 		padding: 0;
 		margin: 0;
-
+		color: #9D1B2E;
 		a {
+			@include bouton-red;
 			@include link-reset;
 			display: block;
 			padding: spacing('sm');
 			@include transition(color);
 
-			&:hover,
-			&:focus {
-				color: color('primary');
-			}
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 32px;
+			
 		}
 	}
 }
