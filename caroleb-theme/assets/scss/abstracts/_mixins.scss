@@ -2,11 +2,11 @@
 // Mixins
 // =============================================================================
 
-@use 'colors' as *;
-@use 'spacing' as *;
-@use 'typography' as *;
-@use 'layout' as *;
-@use 'components' as *;
+@use "colors" as *;
+@use "spacing" as *;
+@use "typography" as *;
+@use "layout" as *;
+@use "components" as *;
 
 // -----------------------------------------------------------------------------
 // Responsive breakpoints
@@ -14,23 +14,23 @@
 // -----------------------------------------------------------------------------
 @mixin media-breakpoint-up($breakpoint) {
 	@if $breakpoint == xs {
-		@media (min-width: breakpoint('xs')) {
+		@media (min-width: breakpoint("xs")) {
 			@content;
 		}
 	} @else if $breakpoint == sm {
-		@media (min-width: breakpoint('sm')) {
+		@media (min-width: breakpoint("sm")) {
 			@content;
 		}
 	} @else if $breakpoint == md {
-		@media (min-width: breakpoint('md')) {
+		@media (min-width: breakpoint("md")) {
 			@content;
 		}
 	} @else if $breakpoint == lg {
-		@media (min-width: breakpoint('lg')) {
+		@media (min-width: breakpoint("lg")) {
 			@content;
 		}
 	} @else if $breakpoint == xl {
-		@media (min-width: breakpoint('xl')) {
+		@media (min-width: breakpoint("xl")) {
 			@content;
 		}
 	}
@@ -38,23 +38,23 @@
 
 @mixin media-breakpoint-down($breakpoint) {
 	@if $breakpoint == xs {
-		@media (max-width: breakpoint('xs') - 1) {
+		@media (max-width: breakpoint("xs") - 1) {
 			@content;
 		}
 	} @else if $breakpoint == sm {
-		@media (max-width: breakpoint('sm') - 1) {
+		@media (max-width: breakpoint("sm") - 1) {
 			@content;
 		}
 	} @else if $breakpoint == md {
-		@media (max-width: breakpoint('md') - 1) {
+		@media (max-width: breakpoint("md") - 1) {
 			@content;
 		}
 	} @else if $breakpoint == lg {
-		@media (max-width: breakpoint('lg') - 1) {
+		@media (max-width: breakpoint("lg") - 1) {
 			@content;
 		}
 	} @else if $breakpoint == xl {
-		@media (max-width: breakpoint('xl') - 1) {
+		@media (max-width: breakpoint("xl") - 1) {
 			@content;
 		}
 	}
@@ -65,7 +65,7 @@
 // -----------------------------------------------------------------------------
 @mixin clearfix {
 	&::after {
-		content: '';
+		content: "";
 		display: table;
 		clear: both;
 	}
@@ -92,11 +92,11 @@
 // -----------------------------------------------------------------------------
 @mixin container {
 	width: 100%;
-	max-width: container('max-width');
+	max-width: container("max-width");
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: container('padding');
-	padding-left: container('padding');
+	padding-right: container("padding");
+	padding-left: container("padding");
 }
 
 // -----------------------------------------------------------------------------
@@ -118,14 +118,14 @@
 // Transition
 // -----------------------------------------------------------------------------
 @mixin transition($properties...) {
-	transition: $properties transition('speed') transition('timing');
+	transition: $properties transition("speed") transition("timing");
 }
 
 // -----------------------------------------------------------------------------
 // Focus styles
 // -----------------------------------------------------------------------------
 @mixin focus-outline {
-	outline: 2px solid color('primary');
+	outline: 2px solid color("primary");
 	outline-offset: 2px;
 }
 
@@ -157,16 +157,16 @@
 
 @mixin bouton-red {
 	border-radius: 58px;
-	border: 2px solid #9D1B2E;
+	border: 2px solid #9d1b2e;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 12px 40px;
-	width: 200px;
-	height: 50px;
+	width: 150px;
+	height: 40px;
 	&:hover,
 	&:focus {
-				background-color: color('bouton-red');
-				color: white;
-			}
+		background-color: color("bouton-red");
+		color: white;
+	}
 }
