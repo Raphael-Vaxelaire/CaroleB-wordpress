@@ -1,7 +1,3 @@
-// =============================================================================
-// Galerie Page
-// =============================================================================
-
 @use "../abstracts" as *;
 
 .galerie-nav {
@@ -11,7 +7,7 @@
 		display: flex;
 		list-style: none;
 		.list-individual {
-			margin: 1rem;
+			margin: 0.5rem;
 			.list-a {
 				font-size: larger;
 				text-decoration: none;
@@ -24,4 +20,19 @@
 			}
 		}
 	}
+}
+
+.galerie-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	margin-top: 1rem;
+	.galerie-items {
+		list-style: none;
+	}
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
 }

@@ -1,7 +1,5 @@
 <?php
-
 get_header();
-
 ?>
 
 <main id="main-content" class="site-main">
@@ -26,41 +24,54 @@ get_header();
         ?>
     </nav>
 
-    <section class="galerie-wrapper">
+    <section>
         <?php
 
-        $posts = get_posts(array(
-            'posts_per_page' => -1,
-            'post_type' => 'oeuvre'
-        ));
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-        if ($posts): ?>
-            <ul>
-                <?php foreach ($posts as $post):
-                    setup_postdata($post);
-                    ?>
-                    <li>
+        $oeuvre_query = new WP_Query(array(
+            'post_type' => 'oeuvre',
+            'posts_per_page' => 12,
+            'paged' => $paged
+        ));
+        ?>
+
+        <?php if ($oeuvre_query->have_posts()): ?>
+            <ul class="galerie-wrapper">
+                <?php while ($oeuvre_query->have_posts()):
+                    $oeuvre_query->the_post(); ?>
+
+                    <li class="galerie-items">
                         <?php
                         $image = get_field('image');
                         $size = 'medium';
                         ?>
-                        <a href="
-                        <?php the_permalink(); ?>"><?php if ($image) {
-                              echo wp_get_attachment_image($image, $size);
-                          } ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php
+                            if ($image) {
+                                echo wp_get_attachment_image($image, $size);
+                            }
+                            ?>
                         </a>
                     </li>
-                <?php endforeach; ?>
+
+                <?php endwhile; ?>
             </ul>
+
+            <div class="pagination">
+                <?php
+                echo paginate_links(array(
+                    'total' => $oeuvre_query->max_num_pages
+                ));
+                ?>
+            </div>
+
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>
 
     </section>
 
-    <!-- <nav class="container"></nav> -->
-</main><!-- #main-content -->
-
-
+</main>
 
 <?php
 get_footer();
