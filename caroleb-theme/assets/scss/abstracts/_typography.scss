@@ -28,7 +28,27 @@ $font-families: (
 		monospace,
 	),
 );
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lexend:wght@300;400&display=swap');
+/* Titres */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-style: italic;
+  font-weight: 400 !important;
+}
 
+/* Sous-titres */
+.subtitle, h4 {
+  font-family: 'Lexend', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Corps de texte */
+body, p {
+  font-family: 'Lexend', sans-serif !important;
+  font-weight: 300;
+}
 // Font sizes map
 $font-sizes: (
 	"small": 0.875rem,
@@ -47,7 +67,7 @@ $font-sizes: (
 	// 28px
 	"h2": 2rem,
 	// 32px
-	"h1": 2.5rem, // 40px
+	"h1": 3.5rem, // 40px
 );
 
 // Font weights map

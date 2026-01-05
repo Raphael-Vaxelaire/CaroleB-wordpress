@@ -4,6 +4,103 @@
 
 @use "../abstracts" as *;
 
-.bio {
-	// Add home page specific styles here
+
+	
+.LEF{
+	display: flex;
+	// justify-content: space-between;
+	height:725px ;
+	background: linear-gradient(to right, #3BC7C9 27%,#9D1B2E 20%);
+	.wp-block-image{
+		display: flex;
+		align-items: end;
+		img{
+			
+			width: 95%;
+		}
+	}
+	.wp-block-group{
+		display: flex;
+		margin-right: 0%;
+
+		h2{
+		font-size: 64px;
+		color: #FFF8FA;
+		display: flex;
+		align-items: center;
+		}
+		p{
+			  white-space: nowrap;
+			font-size: 36px;
+			color: #FFF8FA;
+		}
+
+	}
+	
+}
+
+.propos.is-layout-grid{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-around;
+		.wp-block-image{
+		img{
+			width: 70%;
+		}
+	}
+	.wp-block-group{
+		width: 50%;
+		h2{
+			font-size: 96px;
+		}
+		p{
+			font-size: 36px;	
+			display: flex;
+			justify-content: center;
+		}
+
+	}
+}
+
+.inspiration.is-layout-grid{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-around;
+			.wp-block-image{
+		img{
+			margin-left: 20%;
+			width: 70%;
+		}
+	}
+	.wp-block-group{
+		margin-right: 10%;
+		width: 50%;
+		h2{
+			font-size: 96px;
+		}
+		p{
+			font-size: 36px;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+		}
+
+	}
+}
+
+.art.is-layout-flex{
+	height: 400px;
+	background-color: #9D1B2E;
+	img{
+		width: 80%;
+	}
+	h2{
+		color: #FFF8FA;
+		font-size: 96px;
+	}
+}
+.texte-fin{
+	margin: auto ;
+	width: 80%;
+	font-size: 36px;
 }

@@ -5,5 +5,169 @@
 @use '../abstracts' as *;
 
 .home {
-	// Add home page specific styles here
+  // section 1
+    background-color: #FFF8FA;
+.post1{
+
+	h4{
+		margin-left: 13%;
+		margin-top: 5%;
+    font-size: 52px;
+	}
+  h2{
+		margin-left: 13%;
+		margin-top: 5%;
+    font-size: 96px;
+	}
+  p{
+    font-size: 24px;
+  }
+	.has-text-align-left{
+		margin-left: 13%;
+		max-width: 60%;
+	}
+  .wp-block-buttons.is-content-justification-center {
+    display: flex;
+    gap: 175px;
+  }
+	.wp-block-button__link{
+	all: unset ;
+	display: block;  
+	@include bouton-red2;
+
+	
+	
+}
+}
+.flex{
+	display: flex;
+}
+.colon{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.post2{
+  margin-top: 5%;
+  .wp-block-heading{
+    font-size: 96px;
+    margin-left: 15%;
+    margin-bottom: 5%;
+  }
+  .wp-block-button{
+    margin-top: 2%;
+    margin-bottom: 2%;
+      .wp-block-button__link{
+    	all: unset ;
+	  display: block;  
+    @include bouton-red2;
+    
+  }
+  }
+
+  p{
+    width: 25%;
+    margin: auto;
+    font-size: 24px;
+  }
+}
+
+//section 3
+.post3 {
+
+  margin-top: 5%;
+  h2{
+      margin-left: 12%;
+    font-size: 96px
+  }
+  .mosaic.oeuvre {
+    width: 75%;      
+    margin: 0 auto;  
+  }
+
+  .mosaic {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+	.col2{
+		gap:150px;
+	}
+
+    .left {
+      width: 35%;
+    }
+
+    .right {
+      width: 65%;
+    }
+  }
+
+  .row-small {
+    display: flex;
+    gap: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .raw-small2 {
+    display: flex;
+	flex-direction: column;
+    gap: 20px;
+
+
+  }
+
+
+  .is-layout-grid{
+    margin-left: 12.5%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    .wp-container-content-5f80b302{
+      width: 62%;
+      font-size: 24px;
+
+    }
+    .wp-block-button__link{
+         	all: unset ;
+	  display: block;  
+        @include bouton-red2
+      }
+
+
+  }
+}
+
+.post4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .presse{
+    display: flex;
+    justify-content: end;
+    margin-left: 70%;
+    font-size: 96px;
+  }
+  .flex-viewport{
+  height: 300px;
+  place-content: center;
+  img{
+    border-radius: 5%;
+  }
+}
+p{
+  width: 80%;
+  font-size: 24px;
+}
+}
+
 }
