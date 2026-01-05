@@ -1,9 +1,6 @@
 @use "../abstracts" as *;
 .galerie-intro {
 	@include intro;
-	.galerie-text {
-		font-size: 1.5rem;
-	}
 }
 .galerie-nav {
 	@include nav;

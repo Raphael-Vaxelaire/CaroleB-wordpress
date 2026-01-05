@@ -1,10 +1,19 @@
 @use "../abstracts" as *;
+.pochoirs-intro {
+	@include intro;
+}
 .pochoirs-nav {
 	@include nav;
 	.pochoirs-nav-list {
 		@include nav-list;
-		.pochoirs-list-individual {
-			@include list-individual;
+		.pochoirs-button {
+			@include bouton-red;
+			width: fit-content;
+			background-color: color("bouton-red");
+			&:hover,
+			&:focus {
+				background-color: inherit;
+			}
 			.pochoirs-a {
 				@include list-a;
 			}
@@ -26,10 +35,12 @@
 .pochoirs-pagination {
 	@include pagination;
 	.current {
+		color: #9d1b2e !important;
 		font-size: 3rem;
 	}
 	.page-numbers {
 		text-decoration: none;
+		color: black;
 	}
 }
 .pochoirs-p {

@@ -1,10 +1,19 @@
 @use "../abstracts" as *;
+.collection-privee-intro {
+	@include intro;
+}
 .collection-privee-nav {
 	@include nav;
 	.collection-privee-nav-list {
 		@include nav-list;
-		.collection-privee-list-individual {
-			@include list-individual;
+		.collection-privee-button {
+			@include bouton-red;
+			width: fit-content;
+			background-color: color("bouton-red");
+			&:hover,
+			&:focus {
+				background-color: inherit;
+			}
 			.collection-privee-a {
 				@include list-a;
 			}
@@ -26,10 +35,12 @@
 .collection-privee-pagination {
 	@include pagination;
 	.current {
+		color: #9d1b2e !important;
 		font-size: 3rem;
 	}
 	.page-numbers {
 		text-decoration: none;
+		color: black;
 	}
 }
 .collection-privee-p {

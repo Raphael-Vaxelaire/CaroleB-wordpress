@@ -3,26 +3,28 @@ get_header();
 ?>
 
 <main id="main-content" class="site-main">
-    <h1 class="h1">
-        <?php the_title(); ?>
-    </h1>
+    <section class="collection-privee-intro">
+        <h1> <?php the_title(); ?></h1>
+        <?php the_content() ?>
+    </section>
 
     <nav class="collection-privee-nav">
         <?php
-        $childArgs = array(
+        $subpages = get_pages([
             'child_of' => 86,
-            'post_type' => 'page',
-            'post_status' => 'publish'
-        );
-        $childList = get_pages($childArgs);
+            'sort_column' => 'menu_order'
+        ]);
 
-        echo '<ul class="collection-privee-nav-list">';
-        foreach ($childList as $child) {
-            echo '<li class="collection-privee-list-individual">
-                <a class="collection-privee-a" href="' . get_permalink($child->ID) . '">' . $child->post_title . '</a>
+        if ($subpages) {
+            echo '<ul class="collection-privee-nav-list">';
+            foreach ($subpages as $page) {
+                echo '<button class="collection-privee-button">
+                    <a class="collection-privee-a" href="' . get_permalink($page->ID) . '">' . $page->post_title . '</a>
+                </button>
                 </li>';
+            }
+            echo '</ul>';
         }
-        echo '</ul>';
         ?>
     </nav>
 

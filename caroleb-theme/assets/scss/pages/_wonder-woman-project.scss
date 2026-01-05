@@ -1,10 +1,19 @@
 @use "../abstracts" as *;
+.wonder-woman-intro {
+	@include intro;
+}
 .wonder-woman-nav {
 	@include nav;
 	.wonder-woman-nav-list {
 		@include nav-list;
-		.wonder-woman-list-individual {
-			@include list-individual;
+		.wonder-woman-button {
+			@include bouton-red;
+			width: fit-content;
+			background-color: color("bouton-red");
+			&:hover,
+			&:focus {
+				background-color: inherit;
+			}
 			.wonder-woman-a {
 				@include list-a;
 			}
