@@ -10,21 +10,24 @@ $size = 'medium_large';
 
 <main id="main-content" class="site-main">
     <section class="oeuvre">
-        <?php
-
-        if ($image) {
-            echo wp_get_attachment_image($image, $size);
-        } ?>
-
-        <h1 class="oeuvre-title"><?php the_title() ?></h1>
-
-        <?php
-        if (!empty($image && $description)): ?>
-            <h4 class="oeuvre-date"><?= $date ?></h4>
-            <h4 class="oeuvre-dimensions"><?= $dimensions ?></h4>
-            <p class="oeuvre-description"><?= $description ?></p>
-        <?php endif;
-        ?>
+        <ul class="oeuvre-list">
+            <li>
+                <h1 class="oeuvre-title"> <?php the_title() ?> </h1>
+            </li>
+            <li>
+                <h2 class="oeuvre-dimensions"><?= $date ?></h2>
+            </li>
+        </ul>
+        <div class="oeuvre-info">
+            <?php if ($image) {
+                echo wp_get_attachment_image($image, $size);
+            } ?>
+            <?php if (!empty($image && $description)): ?>
+                <h2 class="oeuvre-dimensions"><?= $dimensions ?></h2>
+                <p class="oeuvre-description"><?= $description ?></p>
+            <?php endif;
+            ?>
+        </div>
     </section>
 </main>
 

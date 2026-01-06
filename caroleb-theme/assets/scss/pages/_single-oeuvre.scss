@@ -1,11 +1,19 @@
-.single-oeuvre {
-	// section 1
-	background-color: #fff8fa;
-}
 .oeuvre {
 	display: grid;
 	justify-content: center;
-	.oeuvre-title {
+	.oeuvre-list {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		.oeuvre-title {
+			margin: 1rem;
+		}
+	}
+}
+.oeuvre-info {
+	margin: 2rem;
+	margin-top: -2rem;
+	.oeuvre-dimensions {
 		margin: 1rem;
 	}
 	.oeuvre-description {
