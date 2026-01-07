@@ -1,25 +1,46 @@
 @use "../abstracts" as *;
 .media-intro {
 	@include intro;
+	@include media($mobile) {
+		margin-left: 0rem;
+		text-align: center;
+		margin-top: 0rem;
+	}
 	.presse-title {
 		@include title;
 		font-size: 96px;
-	}
-	.presse-p {
-		font-size: 1.5rem;
-		margin-top: 2rem;
-		margin-left: 3rem;
+		@include media($mobile) {
+			font-size: 52px;
+			margin: 0rem;
+			margin-top: -2rem;
+		}
 	}
 }
+.presse-p {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	margin-left: 3rem;
+	@include media($mobile) {
+		font-size: 1rem;
+		margin: 1rem;
+		text-align: center;
+	}
+}
+
 .presse-icons {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	justify-items: center;
 	margin: 3rem;
-	gap: 3rem;
+	gap: 2rem;
+	@include media($mobile) {
+		grid-template-columns: repeat(3, 1fr);
+		margin: 1rem;
+		gap: 0rem;
+	}
 	.wp-block-image {
 		img {
-			width: 85%;
+			width: 100%;
 			filter: grayscale(100%);
 			transition: 0.5s;
 		}

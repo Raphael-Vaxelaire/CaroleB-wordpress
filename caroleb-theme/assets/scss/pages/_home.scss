@@ -20,6 +20,8 @@
 			font-size: 52px;
 			@include media($mobile) {
 				font-size: 25px;
+				margin-left: 0rem;
+				text-align: center;
 			}
 		}
 		.accueil-text {
@@ -27,16 +29,23 @@
 			max-width: 80%;
 			margin-left: 4rem;
 			@include media($mobile) {
-				font-size: 20px;
+				font-size: 25px;
+				margin-left: 2rem;
 			}
 		}
 		.accueil-btn {
 			display: flex;
 			gap: 175px;
+			@include media($mobile) {
+				gap: 15px;
+			}
 			.wp-block-button__link {
 				all: unset;
 				display: block;
 				@include bouton-red2;
+				@include media($mobile) {
+					font-size: 20px;
+				}
 			}
 		}
 	}
@@ -58,6 +67,9 @@
 				all: unset;
 				display: block;
 				@include bouton-red2;
+				@include media($mobile) {
+					font-size: 20px;
+				}
 			}
 		}
 		.accueil-text1 {
@@ -67,6 +79,7 @@
 			@include media($mobile) {
 				font-size: 20px;
 				width: 80%;
+				margin-top: 2rem;
 			}
 		}
 	}
@@ -79,6 +92,8 @@
 			margin-left: 7rem;
 			@include media($mobile) {
 				font-size: 40px;
+				margin-left: 0rem;
+				text-align: center;
 			}
 		}
 		.mosaic.oeuvre {
@@ -127,13 +142,19 @@
 		.accueil-oeuvre-content {
 			margin-left: 12.5%;
 			display: flex;
-			margin-top: 2%;
+			margin-top: 5%;
 			margin-bottom: 5%;
+			@include media($mobile) {
+				align-items: center;
+				flex-direction: column;
+				margin-left: 0rem;
+			}
 			.accueil-oeuvre-text {
 				width: 62%;
 				font-size: 24px;
 				@include media($mobile) {
 					font-size: 20px;
+					width: 80%;
 				}
 			}
 			.accueil-btn3 {
@@ -143,6 +164,8 @@
 					@include bouton-red2;
 					@include media($mobile) {
 						text-align: center;
+						font-size: 20px;
+						margin-top: 1rem;
 					}
 				}
 			}

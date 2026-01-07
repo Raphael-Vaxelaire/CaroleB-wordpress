@@ -1,6 +1,11 @@
 @use "../abstracts" as *;
 .pochoirs-intro {
 	@include intro;
+	@include media($mobile) {
+		margin-left: 0rem;
+		text-align: center;
+		margin-top: 0rem;
+	}
 }
 .pochoirs-nav {
 	@include nav;

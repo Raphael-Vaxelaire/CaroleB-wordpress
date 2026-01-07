@@ -1,9 +1,21 @@
 @use "../abstracts" as *;
 .contact-intro {
 	@include intro;
+	@include media($mobile) {
+		margin-left: 0rem;
+		text-align: center;
+		margin-top: 0rem;
+	}
 	.contact-title {
 		@include title;
 		font-size: 96px;
+		@include title;
+		font-size: 96px;
+		@include media($mobile) {
+			font-size: 52px;
+			margin: 0rem;
+			margin-top: -2rem;
+		}
 	}
 }
 .contact-content {

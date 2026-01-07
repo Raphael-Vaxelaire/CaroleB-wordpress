@@ -1,6 +1,11 @@
 @use "../abstracts" as *;
 .wonder-woman-intro {
 	@include intro;
+	@include media($mobile) {
+		margin-left: 0rem;
+		text-align: center;
+		margin-top: 0rem;
+	}
 }
 .wonder-woman-nav {
 	@include nav;

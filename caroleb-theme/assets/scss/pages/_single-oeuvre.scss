@@ -1,3 +1,4 @@
+@use "../abstracts" as *;
 .oeuvre {
 	display: grid;
 	justify-content: center;
@@ -7,6 +8,9 @@
 		list-style: none;
 		.oeuvre-title {
 			margin: 1rem;
+			@include media($mobile) {
+				font-size: 25px;
+			}
 		}
 	}
 }
