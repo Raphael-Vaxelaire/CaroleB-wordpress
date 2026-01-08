@@ -228,6 +228,9 @@
 		.flex-viewport {
 			height: 200px;
 			place-content: center;
+			@include media($mobile) {
+				height: 100px;
+			}
 			ul {
 				gap: 2rem;
 				img {
