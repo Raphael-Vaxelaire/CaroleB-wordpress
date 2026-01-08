@@ -98,7 +98,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 391
+            'p' => 254
         ));
 
         if ($query->have_posts()):

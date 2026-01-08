@@ -59,11 +59,13 @@
 				margin-left: 20%;
 			}
 			.wp-block-image{
+				display: flex;
+				justify-content: center;
 			img{
 				width: 70%;
 			@include media($mobile) {
 				width: 40%;
-				margin-left: 18%;
+				margin-right: 18%;
 			}
 			}
 		}
@@ -100,8 +102,9 @@
 			}
 				.wp-block-image{
 			img{
-				margin-left: 20%;
+
 				width: 70%;
+				margin-left: 20%;
 				@include media($mobile) {
 				width: 40%;
 				margin-bottom: 10%;
@@ -115,18 +118,15 @@
 			h2{
 				font-size: 96px;
 				@include media($mobile) {
-		font-size: 52px;
-		margin-right: 35%;
+			font-size: 52px;
+
 			}  
 		}
-					.ses{
-		@include media($mobile) {
-		margin-right: 80%;
-	}
-	}
+
+	
 			p{
 				font-size: 24px;
-				width: 50%;
+				width: 100%;
 				display: flex;
 				justify-content: center;
 				@include media($mobile) {
