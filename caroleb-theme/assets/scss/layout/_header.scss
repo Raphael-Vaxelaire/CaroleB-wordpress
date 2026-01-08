@@ -7,30 +7,40 @@
 .site-header {
 	padding: spacing("lg") 0;
 	background-color: color("primary");
-	// border-bottom: 1px solid color("border");
+	@include media($tablette) {
+		position: sticky;
+		z-index: 6;
+		top: 0;
+	}
+	@include media($mobile) {
+		position: sticky;
+		z-index: 6;
+		top: 0;
+	}
+}
 
-	.container {
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.main-navigation {
 		display: flex;
-		flex-direction: column;
-
-		.main-navigation {
+		justify-content: center;
+		gap: 25px;
+		@include media($mobile) {
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		.primary-menu {
 			@include media($mobile) {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-    			}
-			.primary-menu{
-					@include media($mobile) {
-						display: grid;
-						grid: auto-flow / 1fr 1fr;
-    				}
+				display: grid;
+				grid: auto-flow / 1fr 1fr;
 			}
-			.menu-toggle{
-				@include media($mobile) {
-						margin-bottom: 2%;
-    				}
+		}
+		.menu-toggle {
+			@include media($mobile) {
+				margin-bottom: 2%;
 			}
 		}
 	}
@@ -44,7 +54,7 @@
 	.site-title {
 		margin: 0;
 		font-size: font-size("h3");
-		
+
 		a {
 			@include link-reset;
 			color: color("primary");

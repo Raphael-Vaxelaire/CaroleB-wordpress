@@ -13,7 +13,7 @@
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
-                the_title('<h2>', '</h2>');
+                the_title('<h1>', '</h1>');
                 the_content();
             endwhile;
         endif;
@@ -68,6 +68,7 @@
         $img4 = get_field('image_4', $post_id);
         $img5 = get_field('image_5', $post_id);
         $img6 = get_field('image_6', $post_id);
+        $img7 = get_field('image_7', $post_id);
         ?>
         <div class="mosaic  oeuvre">
             <div class="col left col2">
@@ -85,8 +86,8 @@
                     <div class="raw-small2">
                         <?php if ($img2)
                             echo wp_get_attachment_image($img2, 'large'); ?>
-                        <?php if ($img2)
-                            echo wp_get_attachment_image($img2, 'large'); ?>
+                        <?php if ($img7)
+                            echo wp_get_attachment_image($img7, 'large'); ?>
                     </div>
 
                 </div>
@@ -98,7 +99,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 254
+            'p' => 391
         ));
 
         if ($query->have_posts()):
